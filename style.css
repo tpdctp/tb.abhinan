@@ -22,11 +22,11 @@ body {
   border: 1px solid #ccc;
   border-radius: 3px;
 }
-#channel-list {
-  overflow-y: scroll; /* Enable scrolling for the channel list */
-  scrollbar-width: none; /* Hide the default scrollbar (works in Chrome, Safari, and Opera) */
-  -ms-overflow-style: none; /* Hide the default scrollbar (works in Internet Explorer, Edge) */
-}
+/*#channel-list {
+  overflow-y: scroll; /* Enable scrolling for the channel list 
+  scrollbar-width: none; /* Hide the default scrollbar (works in Chrome, Safari, and Opera) 
+  -ms-overflow-style: none; /* Hide the default scrollbar (works in Internet Explorer, Edge) 
+}*/
 
 /* Channel List Section */
 
@@ -64,6 +64,24 @@ body {
   margin: 0;
  
 }
+#channelID{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#nowplaying-span{
+  display: block;
+}
+
+
+
+#toggle-HD{
+  height: 50px;
+  width: 120px;
+  text-align: center;
+  border-style: solid;
+  border-radius: 20px;
+}
 
 #channel-logo{
   margin: 0;
@@ -90,8 +108,6 @@ body {
 }
 #nowplayingtag,#upcoming,#channel-logo{
   display: none;
-  
-  
 }
 #nowplayingtag,#upcoming{
   font-weight: 30px;
@@ -104,10 +120,10 @@ body {
   border-radius: 20px;
   height: 50px;
   text-align: center;
-  border-style: dashed;
+  border-style: solid;
 }
 .collapsed {
-  background-color: #333333;
+  background: #333333;
   
  
   
@@ -134,7 +150,7 @@ body {
 
 #your-scrollable-div{
   /* Set a height for the element to create scrollable content */
-  height: 120px; /* Adjust as needed */
+  height: auto; /* Adjust as needed */
   overflow-y: auto; /* Enable vertical scrolling */
   padding: 10px;
   background-color: transparent;
@@ -176,6 +192,7 @@ body {
   flex-direction: column;
   flex-wrap: wrap;
   width: 130px;
+  padding: 10px;
 }
 #channel-container{
 /* flex: 0 0 25%;*/
@@ -200,7 +217,7 @@ margin: 0; /* Remove default margin */
 padding: 0;
 height:50px;
 text-align: center;
-border-style: dashed;
+border-style: solid;
 border-radius: 20px;
 }
 
@@ -248,9 +265,38 @@ border-radius: 20px;
   font-size: 16px !important;
 }
 
-/*unwanted codes*/
+/*unwanted codes
+.vjs-control-bar,.vjs-current-time ,.vjs-time-control, .vjs-control,.vjs-progress-control, .vjs-control,.vjs-time-control,
+.vjs-time-divider,.vjs-play-control,.vjs-control,.vjs-button,.vjs-playing,.vjs-progress-holder,.vjs-slider,.vjs-slider-horizontal,
+.vjs-duration,.vjs-time-control,.vjs-control,.vjs-current-time-display{
+  display: block;
+}*/
+/*.vjs-remaining-time-display{
+  display: block;
+  color: wheat;
+  position: absolute;
+  top: 0;
+  margin: 0;
+  font-size: 15px;
+  
+}*/
 
-
-
+/*.vjs-current-time,.vjs-time-control,.vjs-control,.vjs-current-time-display,.vjs-big-play-button{
+  display: block;
+}*/
+.fab {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color:whitesmoke; /* Green color */
+  color: black;
+  padding: 15px;
+  border-radius: 50%;
+  opacity: 0.8; /* Semi-transparent */
+  transition: opacity 0.3s ease-in-out;
+}
+.fab:hover {
+  opacity: 1; /* Fully opaque on hover */
+}
 
 
